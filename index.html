@@ -17,7 +17,7 @@
         <label id="label" v-for="task in tasks" for="1"> 
             <input type="checkbox" value="1"> {{ task }} <br>
         </label>
-        <input type="text" :placeholder="placeholder" @keyup.enter="addToTasks">
+        <input type="text" v-model="inputValue" :placeholder="placeholder" @keyup.enter="addToTasks">
     </div>
     
     <script src="app.js"></script>

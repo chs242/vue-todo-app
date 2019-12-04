@@ -1,14 +1,20 @@
+
 new Vue ({
     el: '#app',
     data: {
         tasks: ['learn vue.js', 'build a todo app', 'get it to work'],
-        placeholder: 'what is your next task'
+        inputValue: '',
+        placeholder: 'what is your next task?'
     },
     methods: {
-        addToTasks (task){
-            this.tasks.push(task)
-            return this.placeholder;
+        addToTasks (){
+            this.tasks.push(this.inputValue)
+            return this.inputValue = '';
+        
         },
+        toggle (){
+
+        }
     
     }
 })
