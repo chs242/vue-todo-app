@@ -5,12 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>vue-practice-todo-app</title>
-    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!--<link rel = "stylesheet" type = "text/css" href = "style.css" />-->
 </head>
 <body>
     
-    <div id="app"></div>
-
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <div id="app">
+        <h2>What should I do today</h2>
+        
+        
+        <label id="label" v-for="task in tasks" for="1"> 
+            <input type="checkbox" value="1"> {{ task }} <br>
+        </label>
+        <input type="text" :placeholder="placeholder" @keyup.enter="addToTasks">
+    </div>
+    
+    <script src="app.js"></script>
 </body>
 </html>
