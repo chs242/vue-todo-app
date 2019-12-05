@@ -13,10 +13,10 @@
     <div id="app">
         <h2>What should I do today</h2>
         
-        
-        <label id="label" v-for="task in tasks" for="1"> 
+        <div v-for="task in tasks">
             <input type="checkbox" value="1"> {{ task }} <br>
-        </label>
+            <label id="label"  for="1"> </label>
+        </div>
         <input type="text" v-model="inputValue" :placeholder="placeholder" @keyup.enter="addToTasks">
     </div>
     
